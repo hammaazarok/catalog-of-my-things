@@ -11,7 +11,7 @@ class MusicAlbum < Items
   private
 
   def can_be_archived?
-    (@current_date - publish_date) > 10 || on_spotify = true
+    (@current_date - publish_date) > 10 || on_spotify
   end
 end
 puts @current_date

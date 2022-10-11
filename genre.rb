@@ -16,5 +16,3 @@ class Genre
     @items << name
   end
 end
-
-genre = Genre.new('the last one')
