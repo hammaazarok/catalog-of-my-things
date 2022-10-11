@@ -1,3 +1,5 @@
+require 'date'
+
 class Items
   attr_accessor :genre, :author, :label, :publish_date
 
@@ -6,7 +8,8 @@ class Items
     @genre = nil
     @author = nil
     @label = nil
-    @publish_date = publish_date
+    @publish_date = Date.parse(publish_date).year
+    @current_date = DateTime.now.year
     @archived = archived
   end
 
@@ -23,18 +26,16 @@ class Items
   end
 
   def move_to_archive
-    if can_be_archived?
-      @archived = true
-    end
+      @archived = can_be_archived?
   end
 
   private
 
   def can_be_archived?
-    if @publish_date > 10
-      true
-    else
-      false
-    end
+    (@current_date - @publish_date) > 10
   end
 end
+
+item = Items.new("2014-02-22");
+puts item.move_to_archive
+
