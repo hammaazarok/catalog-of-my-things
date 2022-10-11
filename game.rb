@@ -4,7 +4,7 @@ require './items'
 class Game < Items
   attr_accessor :mulipalyer, :last_played_at
 
-  def initialize(mulipalyer, last_played_at, publish_date, archived: false)
+  def initialize(_mulipalyer, _last_played_at, publish_date, archived: false)
     super(publish_date, archived)
     @mulipalyer = publisher
     @last_played_at = cover_state
