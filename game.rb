@@ -13,6 +13,6 @@ class Game < Items
   private
 
   def can_be_archived?
-    (@current_date - publish_date) < 10
+    (@current_date - publish_date) < 10 || (@current_date - last_played_at) < 2
   end
 end
