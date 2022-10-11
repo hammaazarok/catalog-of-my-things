@@ -1,5 +1,4 @@
 require './items'
-require 'pry'
 
 class Book < Items
   attr_accessor :publisher, :cover_state
