@@ -20,6 +20,7 @@ class App
   # rubocop:disable Metrics/CyclomaticComplexity
   # rubocop:disable Metrics/MethodLength:
   def run
+    BookLabel.load
     puts "Welcome to Catalog Of My Things App!\n\n"
     loop do
       num = menu
@@ -44,6 +45,7 @@ class App
       when '9'
         # write your code here
       when '0'
+        BookLabel.save
         puts 'Thank you for using this App ...'
         exit
       else
