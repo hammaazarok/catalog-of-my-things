@@ -1,10 +1,8 @@
 require './create_book_module'
-require './game_module'
-
+require './add_music_genre'
 class App
   include BookLabel
-  include GameModule
-
+  include MusicGenre
   def menu
     menu_list = ["\nPlease choose an option by entering a number:",
                  '1 - List all books', '2 - List all Music Albums', '3 - List all Games',
@@ -31,10 +29,12 @@ class App
         BookLabel.list_books
       when '2'
         # write your code here
+        MusicGenre.list_music_album
       when '3'
         GameModule.list_games
       when '4'
         # write your code here
+        MusicGenre.list_genres
       when '5'
         BookLabel.list_labels
       when '6'
@@ -43,6 +43,7 @@ class App
         BookLabel.add_book
       when '8'
         # write your code here
+        MusicGenre.add_music_album
       when '9'
         GameModule.add_game
       when '0'
