@@ -24,7 +24,7 @@ ruby main.rb
 👤 **Hamma Azarok**
 
 - Github [@hammaazarok]()
-- LinkedIn [@hammaazarok]( )
+- LinkedIn [@hammaazarok]()
 
 ## 🤝 Contributing
 
