@@ -1,8 +1,9 @@
 require './create_book_module'
-
+require './add_music_genre'
+require './game_module'
 class App
   include BookLabel
-
+  include MusicGenre
   def menu
     menu_list = ["\nPlease choose an option by entering a number:",
                  '1 - List all books', '2 - List all Music Albums', '3 - List all Games',
@@ -21,6 +22,7 @@ class App
   # rubocop:disable Metrics/MethodLength:
   def run
     BookLabel.load
+    GameModule.load_data
     puts "Welcome to Catalog Of My Things App!\n\n"
     loop do
       num = menu
@@ -30,22 +32,26 @@ class App
         BookLabel.list_books
       when '2'
         # write your code here
+        MusicGenre.list_music_album
       when '3'
-        # write your code here
+        GameModule.list_games
       when '4'
         # write your code here
+        MusicGenre.list_genres
       when '5'
         BookLabel.list_labels
       when '6'
-        # write your code here
+        GameModule.list_authors
       when '7'
         BookLabel.add_book
       when '8'
         # write your code here
+        MusicGenre.add_music_album
       when '9'
-        # write your code here
+        GameModule.add_game
       when '0'
         BookLabel.save
+        GameModule.save_data
         puts 'Thank you for using this App ...'
         exit
       else
