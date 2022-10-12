@@ -11,14 +11,14 @@ module GameModule
   end
 
   def self.save_data
-    game = @games.map do |game|
+    game1 = @games.map do |game|
       { mulipalyer: game.mulipalyer, last_played_at: game.last_played_at.to_date, publish_date: game.publish_date }
     end
-    File.write('data/games.json', JSON.pretty_generate(game))
-    author = @authors.map do |author|
+    File.write('data/games.json', JSON.pretty_generate(game1))
+    author1 = @authors.map do |author|
       { first_name: author.first_name, last_name: author.last_name }
     end
-    File.write('data/authors.json', JSON.pretty_generate(author))
+    File.write('data/authors.json', JSON.pretty_generate(author1))
   end
 
   def self.load_data
