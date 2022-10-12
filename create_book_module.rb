@@ -11,7 +11,7 @@ module BookLabel
     publisher = gets.chomp.capitalize
     print 'Enter the book\'s cover state (eg. "good" or "bad"): '
     cover_state = gets.chomp.downcase
-    print 'Enter the book\'s publish date (eg. 2022-10-24): '
+    print 'Enter the book\'s publish date (eg.2022-10-24): '
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date, false)
     @books.push(book)
