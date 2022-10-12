@@ -4,10 +4,10 @@ require './items'
 class Game < Items
   attr_accessor :mulipalyer, :last_played_at
 
-  def initialize(_mulipalyer, _last_played_at, publish_date, _archived)
+  def initialize(mulipalyer, last_played_at, publish_date, _archived)
     super(publish_date)
-    @mulipalyer = _mulipalyer
-    @last_played_at = DateTime.parse(_last_played_at)
+    @mulipalyer = mulipalyer
+    @last_played_at = DateTime.parse(last_played_at)
   end
 
   def move_to_archive
