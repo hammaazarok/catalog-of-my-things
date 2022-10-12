@@ -7,12 +7,12 @@ class Genre
   def initialize(name)
     @id = Random.rand(1000)
     @name = name
-    puts @name
     @items = []
   end
 
-  def add_item(name)
-    name.genre = self
+  def add_item(item)
     @items << name
+    item.genre = self
   end
 end
+
