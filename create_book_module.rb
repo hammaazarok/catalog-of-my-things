@@ -34,7 +34,7 @@ module BookLabel
       puts 'No book added yet'
     else
       @books.each do |book|
-        puts "#{book.publisher} #{book.cover_state} #{book.publish_date}"
+        puts "Publisher: #{book.publisher} Cover state: #{book.cover_state} Publish date: #{book.publish_date}"
       end
     end
   end
@@ -44,7 +44,7 @@ module BookLabel
       puts 'No label added yet'
     else
       @labels.each do |label|
-        puts "#{label.title} #{label.color}"
+        puts "Label title: #{label.title} Label color: #{label.color}"
       end
     end
   end
