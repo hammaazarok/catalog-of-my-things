@@ -1,7 +1,9 @@
 require './create_book_module'
+require './game_module'
 
 class App
   include BookLabel
+  include GameModule
 
   def menu
     menu_list = ["\nPlease choose an option by entering a number:",
@@ -30,19 +32,19 @@ class App
       when '2'
         # write your code here
       when '3'
-        # write your code here
+        GameModule.list_games
       when '4'
         # write your code here
       when '5'
         BookLabel.list_labels
       when '6'
-        # write your code here
+        GameModule.list_authors
       when '7'
         BookLabel.add_book
       when '8'
         # write your code here
       when '9'
-        # write your code here
+        GameModule.add_game
       when '0'
         puts 'Thank you for using this App ...'
         exit
