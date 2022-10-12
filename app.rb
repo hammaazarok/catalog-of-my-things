@@ -20,6 +20,7 @@ class App
   # rubocop:disable Metrics/CyclomaticComplexity
   # rubocop:disable Metrics/MethodLength:
   def run
+    BookLabel.load
     GameModule.load_data
     MusicGenre.load_data
     puts "Welcome to Catalog Of My Things App!\n\n"
@@ -50,6 +51,7 @@ class App
       when '9'
         GameModule.add_game
       when '0'
+        BookLabel.save
         GameModule.save_data
         puts 'Thank you for using this App ...'
         exit
