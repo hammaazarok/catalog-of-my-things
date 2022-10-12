@@ -11,7 +11,6 @@ class MusicAlbum < Items
   private
 
   def can_be_archived?
-    (@current_date - publish_date) < 10 || on_spotify = 'true'
+    (@current_date - publish_date) < 10 || on_spotify == 'true'
   end
 end
-music = MusicAlbum.new('true', '2020-10-24', false)
