@@ -33,6 +33,13 @@ ruby main.rb
 - Twitter: [@adonu_ernest](https://twitter.com/adonu_ernest)
 - LinkedIn: [Ernest Anyewe Adonu](www.linkedin.com/in/ernest-anyewe-adonu)
 
+
+👤 **Johnson Emmanuel**
+
+- GitHub: [@Johnson](https://github.com/ifzyy)
+- Twitter: [@Johnson](https://twitter.com/JohnsnEmmanuel)
+- LinkedIn: [@Johnson](https://www.linkedin.com/in/johnson-emmanuel/)
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
