@@ -1,5 +1,6 @@
 # Catalog Of My Things
-Console app the user can add and display a list of different things (Books , Music , Games)
+
+A Console app that allows user to add and display a list of different things such as (Books , Music , Games)
 
 ## Built With
 
@@ -23,14 +24,20 @@ ruby main.rb
 
 👤 **Hamma Azarok**
 
-- Github [@hammaazarok]()
-- LinkedIn [@hammaazarok]()
+- Github: [@hammaazarok]()
+- LinkedIn: [@hammaazarok]()
+
+👤 **Ernest Anyewe Adonu**
+
+- GitHub: [@principlebrothers](https://github.com/principlebrothers)
+- Twitter: [@adonu_ernest](https://twitter.com/adonu_ernest)
+- LinkedIn: [Ernest Anyewe Adonu](www.linkedin.com/in/ernest-anyewe-adonu)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/hammaazarok/catalog-of-my-things/issues/new).
 
 ## Show your support
 
@@ -38,6 +45,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](
-    ./LICENSE
-) licensed.
+This project is [MIT](./LICENSE) licensed.
