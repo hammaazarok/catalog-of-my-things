@@ -38,7 +38,7 @@ ruby main.rb
 
 - GitHub: [@Johnson](https://github.com/ifzyy)
 - Twitter: [@Johnson](https://twitter.com/JohnsnEmmanuel)
-- LinkedIn: [@Johnson](www.linkedin.com/in/johnson-emmanuel)
+- LinkedIn: [@Johnson](https://www.linkedin.com/in/johnson-emmanuel/)
 
 ## 🤝 Contributing
 
