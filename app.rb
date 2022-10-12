@@ -1,6 +1,10 @@
 require './create_book_module'
 require './add_music_genre'
+<<<<<<< Updated upstream
 
+=======
+require './game_module.rb'
+>>>>>>> Stashed changes
 class App
   include BookLabel
   include MusicGenre
