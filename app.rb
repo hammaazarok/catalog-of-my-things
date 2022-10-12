@@ -1,6 +1,10 @@
+require './create_book_module'
+
 class App
+  include BookLabel
+
   def menu
-    menu_list = ["Welcome to Catalog Of My Things App!\n\n", 'Please choose an option by entering a number:',
+    menu_list = ["\nPlease choose an option by entering a number:",
                  '1 - List all books', '2 - List all Music Albums', '3 - List all Games',
                  '4 - List all genres (e.g \'Comedy\', \'Thriller\')',
                  '5 - List all labels (e.g. \'Gift\', \'New\')',
@@ -9,38 +13,45 @@ class App
     menu_list.each do |item|
       puts item
     end
+    print 'Option: '
     gets.chomp.to_s
   end
 
   # rubocop:disable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/MethodLength:
   def run
-    num = menu
-    case num
-    when '1'
-      # write your code here
-    when '2'
-      # write your code here
-    when '3'
-      # write your code here
-    when '4'
-      # write your code here
-    when '5'
-      # write your code here
-    when '6'
-      # write your code here
-    when '7'
-      # write your code here
-    when '8'
-      # write your code here
-    when '9'
-      # write your code here
-    when '0'
-      puts 'Thank you for using this App ...'
-      exit
-    else
-      puts 'Incorrect Input'
-      run
+    puts "Welcome to Catalog Of My Things App!\n\n"
+    loop do
+      num = menu
+      case num
+      when '1'
+        # write your code here
+        BookLabel.list_books
+      when '2'
+        # write your code here
+      when '3'
+        # write your code here
+      when '4'
+        # write your code here
+      when '5'
+        BookLabel.list_labels
+      when '6'
+        # write your code here
+      when '7'
+        BookLabel.add_book
+      when '8'
+        # write your code here
+      when '9'
+        # write your code here
+      when '0'
+        puts 'Thank you for using this App ...'
+        exit
+      else
+        puts 'Incorrect Input'
+        run
+      end
     end
   end
+  # rubocop: enable Metrics/MethodLength
   # rubocop:enable Metrics/CyclomaticComplexity
 end
