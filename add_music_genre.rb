@@ -1,9 +1,46 @@
 require './genre'
 require './music'
+require 'json'
 
 module MusicGenre
   @music_albums = []
   @genres = []
+
+  def self.file_exist?(filename)
+    File.exist? filename
+  end
+
+  def self.save_data
+    music_album = @music_albums.map do |album|
+      { on_spotify: album.on_spotify, publish_date: album.publish_date }
+    end
+    File.write('data/music.json', JSON.pretty_generate(music_album))
+    genre = @genres.map do |gen|
+      { name: gen.name }
+    end
+    File.write('data/genre.json', JSON.pretty_generate(genre))
+  end
+
+  def self.load_data
+    path = 'data/music.json'
+    if file_exist?(path)
+      music_album = JSON.parse(File.read(path))
+      music_album.each do |album|
+        @music_albums << MusicAlbum.new(album['on_spotify'], album['publish_date'], false)
+      end
+    else
+      puts 'music_album.json file does not exist'
+    end
+    path2 = 'data/genre.json'
+    if file_exist?(path2)
+      genres = JSON.parse(File.read(path2))
+      genres.each do |genre|
+        @genres << Genre.new(genre['name'])
+      end
+    else
+      puts 'genres.json file does not exist'
+    end
+  end
 
   def self.add_music_album
     music_genre = add_genre
