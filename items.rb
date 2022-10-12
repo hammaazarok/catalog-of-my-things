@@ -8,8 +8,8 @@ class Items
     @genre = nil
     @author = nil
     @label = nil
-    @publish_date = Date.parse(publish_date).year
-    @current_date = DateTime.now.year
+    @publish_date = Date.parse(publish_date)
+    @current_date = DateTime.now
     @archived = archived
   end
 
@@ -33,6 +33,6 @@ class Items
   private
 
   def can_be_archived?
-    (@current_date - @publish_date) > 10
+    (@current_date.year - @publish_date.year) > 10
   end
 end
