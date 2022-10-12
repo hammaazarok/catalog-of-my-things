@@ -6,7 +6,7 @@ describe Items do
   it 'Test Items attributes' do
     item = Items.new('2014-02-22')
 
-    expect(item.publish_date).to eq 2014
+    expect(item.publish_date.year).to eq 2014
     expect(item.genre).to eq nil
     expect(item.move_to_archive).to eq false
   end
