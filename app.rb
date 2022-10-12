@@ -28,15 +28,12 @@ class App
       num = menu
       case num
       when '1'
-        # write your code here
         BookLabel.list_books
       when '2'
-        # write your code here8
         MusicGenre.list_music_album
       when '3'
         GameModule.list_games
       when '4'
-        # write your code here
         MusicGenre.list_genres
       when '5'
         BookLabel.list_labels
@@ -45,7 +42,6 @@ class App
       when '7'
         BookLabel.add_book
       when '8'
-        # write your code here
         MusicGenre.add_music_album
         MusicGenre.save_data
       when '9'
