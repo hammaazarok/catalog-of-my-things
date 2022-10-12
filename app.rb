@@ -1,5 +1,6 @@
 require './create_book_module'
 require './add_music_genre'
+require './game_module'
 class App
   include BookLabel
   include MusicGenre
