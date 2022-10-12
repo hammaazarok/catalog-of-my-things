@@ -1,9 +1,46 @@
 require './game'
 require './author'
+require 'json'
 
 module GameModule
   @games = []
   @authors = []
+
+  def self.file_exist?(filename)
+    File.exist? filename
+  end
+
+  def self.save_data
+    game = @games.map do |game|
+      { mulipalyer: game.mulipalyer, last_played_at: game.last_played_at.to_date, publish_date: game.publish_date }
+    end
+    File.write('data/games.json', JSON.pretty_generate(game))
+    author = @authors.map do |author|
+      { first_name: author.first_name, last_name: author.last_name }
+    end
+    File.write('data/authors.json', JSON.pretty_generate(author))
+  end
+
+  def self.load_data
+    path = 'data/games.json'
+    if file_exist?(path)
+      games = JSON.parse(File.read(path))
+      games.each do |game|
+        @games << Game.new(game['multiplayer'], game['last_played_at'], game['publish_date'], false)
+      end
+    else
+      puts 'Games.json file does not exist'
+    end
+    path2 = 'data/authors.json'
+    if file_exist?(path2)
+      authors = JSON.parse(File.read(path2))
+      authors.each do |author|
+        @authors << Author.new(author['first_name'], author['last_name'])
+      end
+    else
+      puts 'Authors.json file does not exist'
+    end
+  end
 
   def self.add_game
     game_author = add_author
