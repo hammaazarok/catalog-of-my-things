@@ -2,7 +2,7 @@ require './music'
 
 describe MusicAlbum do
   context 'Instantiate the Music object' do
-    music = MusicAlbum.new('false', '2020-10-24',false)
+    music = MusicAlbum.new('false', '2020-10-24', false)
 
     describe '#new' do
       it 'Takes three parameters and returns a Music album object' do
